@@ -74,16 +74,16 @@ function setup() {
         //make bear appear
         //bear.style.display='block';
         circle.style.display='block';
+        console.log('show target');
       }
 
-      if ((xpos<400) && (ypos<400)){
+      if ((xpos<200) && (ypos<200)){
 
         //hide bear again
         //bear.style.display='none';
-        circle.style.display='none';
 
         //change scene to the next to the next one by adding 1
-        mode++;
+        mode = 2;
       }
 
       //changing of scenes
@@ -93,7 +93,7 @@ function setup() {
         circle.style.display='none';
       }
     }
-    // console.log("cat is at: " + xpos + ", " + ypos);
+   console.log("pool is at: " + xpos + ", " + ypos);
   }
   
   function windowResized() {

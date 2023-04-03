@@ -20,5 +20,8 @@ body{
 
 #circle{
     display: none;
-    z-index: 2;
+    z-index: 99;
+    position: absolute;
+    top:30%;
+    left: 30%;
 }

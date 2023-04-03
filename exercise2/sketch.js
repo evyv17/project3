@@ -20,11 +20,14 @@ function setup() {
     removeElements();
     //lets manipulate the DOM and make our cat move with the arrow keys
     //create an image element in html
+
     //let cat = createImg("images/cat.png");
     let pool = createImg("images/3ball.png")
+
     //select size of image
     //cat.size(200,200);
     pool.size(200,200);
+
      // give it an id
     //cat.id('cat');
     pool.id('pool');

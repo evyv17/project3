@@ -11,7 +11,7 @@ function setup() {
     let cnv = createCanvas(windowWidth, windowHeight);
     cnv.parent('mySketch');
 
-    result = createElement('p', "Name the band fronted by the singer Sting.");
+    result = createElement('p', "Who had a hit in the 1980s with 'The Greatest Love of All'?");
     result.style('font-size', '40px');
     result.style('margin', '0px');
     result.style('text-align', 'center');
@@ -62,7 +62,7 @@ function output() {
   // Answer1.innerHTML = answers;
   
 
-  if (answers == "The Police"){
+  if (answers == "Whitney Houston"){
     background(201, 245, 191);
     // Answer1.innerHTML = answers;
     let a = createA('page7.html', 'next');

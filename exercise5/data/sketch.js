@@ -1,6 +1,9 @@
 let days = [];
 
-let instrument, band, icon, img;
+let instrument, band, icon;
+
+let electricguitar, acousticguitar, ACDC, davidbowie, ledzeppelin, prince;
+
 
 let enter, entered;
 
@@ -9,20 +12,33 @@ let body = document.getElementById('html-body');
 let spacex = 0;
 let spacey = 0;
 
+
+function preload(){
+  electricguitar = loadImage('images/electricguitar.png');
+  acousticguitar= loadImage('images/acousticguitar.png');
+  acdc= loadImage('images/acdc.png');
+  davidbowie= loadImage('images/davidbowie.png');
+  prince= loadImage('images/prince.png');
+}
+
+
+
 function setup() {
   // make the div called "mySketch" a p5.js canvas element
   let cnv = createCanvas(windowWidth, windowHeight);
   cnv.parent('mySketch');
 
   enter = createButton('enter');
-  enter.id('enter')
+  enter.id('enter');
   entered = document.getElementById('enter');
   body.appendChild(entered);
   enter.mousePressed(add);
 
   background(0);
-
 }
+
+
+
 
 function draw() {
 
@@ -33,65 +49,45 @@ function draw() {
 }
 
 function windowResized() {
-  // resize the canvas when the screen is resized.
   resizeCanvas(windowWidth, windowHeight);
 }
 
 
-
-function setup(){ 
-
-  
+function enter() {
   if (instrument == "an electric guitar"){
+    img = ('images/electricguitar.png')
   } 
-
   else if (instrument == "an acoustic guitar"){
-    
+    img = ('images/acousticguitar.png')
   }
 
-  
-  // else if ( weather == "gloomy"){
-  //   fill(64, 59, 156)
-  // }
-
- 
-  noStroke();
-  rect(350+spacex, 400+spacey, 100, 100)
   if (band == 'Led Zeppelin'){
-    fill(255, 0, 247)
+    img = ('images/ledzeppelin.png')
   } 
-  
-  else if (band == 'Hall N Oates'){
-    fill(31, 96, 181)
+
+
+  else if (band == 'ACDC'){
+    img = ('images/acdc.png')
   }
+ 
 
-
-
-  noStroke();
-  ellipse(300+spacex, 400+spacey, 100, 100)
   if(icon == "David Bowie"){
-    stroke(87, 112, 250)
+    img = ('images/davidbowie.png')
   }
   
   else if (icon == "Prince"){
-    stroke(17, 6, 145)
+    img = ('images/prince.png')
   } 
   
-  else if(icon =="Whitney Houston"){
-    stroke(25, 97, 17)
-  }
 
-
-  strokeWeight(10);
-  line(250+spacex, 300+spacey, 450+spacex, 500+spacey)
+  // strokeWeight(10);
+  // line(250+spacex, 300+spacey, 450+spacex, 500+spacey)
   
-  spacex += 200;
-  if(spacex > 1000){
-    spacex = 0;
-    spacey += 200;
-  }
-
-
+  // spacex += 200;
+  // if(spacex > 1000){
+  //   spacex = 0;
+  //   spacey += 200;
+  // }
 
 }
 

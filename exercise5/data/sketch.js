@@ -4,7 +4,6 @@ let instrument, band, icon;
 
 let electricguitar, acousticguitar, ACDC, davidbowie, ledzeppelin, prince;
 
-
 let enter, entered;
 
 let body = document.getElementById('html-body');
@@ -22,7 +21,6 @@ function preload(){
 }
 
 
-
 function setup() {
   // make the div called "mySketch" a p5.js canvas element
   let cnv = createCanvas(windowWidth, windowHeight);
@@ -32,16 +30,13 @@ function setup() {
   enter.id('enter');
   entered = document.getElementById('enter');
   body.appendChild(entered);
-  enter.mousePressed(add);
+  enter.mousePressed(display);
 
   background(0);
 }
 
 
-
-
 function draw() {
-
   instrument = document.getElementById('instrument').value;
   band = document.getElementById('band').value;
   icon = document.getElementById('icon').value;
@@ -53,43 +48,67 @@ function windowResized() {
 }
 
 
-function enter() {
-  if (instrument == "an electric guitar"){
-    img = ('images/electricguitar.png')
+function display() {
+  background(0)
+  if (instrument == "electricguitar"){
+    image(electricguitar, 400, 200);
   } 
-  else if (instrument == "an acoustic guitar"){
-    img = ('images/acousticguitar.png')
+  else if (instrument == "acousticguitar"){
+    image(acousticguitar, 400, 200);
   }
+}
+
+function display() {
+  background(0)
 
   if (band == 'Led Zeppelin'){
-    img = ('images/ledzeppelin.png')
+    image(ledzeppelin, 400, 200);
   } 
-
-
   else if (band == 'ACDC'){
-    img = ('images/acdc.png')
+    image(ACDC, 400, 200);
   }
- 
+}
+
+
+function display() {
+  background(0)
 
   if(icon == "David Bowie"){
-    img = ('images/davidbowie.png')
+    image(ACDC, 400, 200);
   }
   
   else if (icon == "Prince"){
     img = ('images/prince.png')
   } 
-  
-
-  // strokeWeight(10);
-  // line(250+spacex, 300+spacey, 450+spacex, 500+spacey)
-  
-  // spacex += 200;
-  // if(spacex > 1000){
-  //   spacex = 0;
-  //   spacey += 200;
-  // }
-
 }
+
+function icon(){
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   // strokeWeight(10);
+//   // line(250+spacex, 300+spacey, 450+spacex, 500+spacey)
+  
+//   // spacex += 200;
+//   // if(spacex > 1000){
+//   //   spacex = 0;
+//   //   spacey += 200;
+//   // }
+
 
 function add() {
   days.push({
@@ -101,5 +120,5 @@ function add() {
   console.log(days);
   console.log("day submitted")
 
-  glyph();
+  display();
 }

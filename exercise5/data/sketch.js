@@ -60,8 +60,7 @@ function display() {
 
 function display() {
   background(0)
-
-  if (band == 'Led Zeppelin'){
+  if (band == 'ledzeppelin'){
     image(ledzeppelin, 400, 200);
   } 
   else if (band == 'ACDC'){
@@ -73,19 +72,14 @@ function display() {
 function display() {
   background(0)
 
-  if(icon == "David Bowie"){
+  if(icon == "davidbowie"){
     image(ACDC, 400, 200);
   }
   
-  else if (icon == "Prince"){
-    img = ('images/prince.png')
+  else if (icon == "prince"){
+    image(prince, 400, 200);
   } 
 }
-
-function icon(){
-  
-}
-
 
 
 
@@ -110,15 +104,15 @@ function icon(){
 //   // }
 
 
-function add() {
-  days.push({
-    date: Date(),
-    instrument: instrument,
-    band: band,
-    icon: icon
-  })
-  console.log(days);
-  console.log("day submitted")
+// function add() {
+//   days.push({
+//     date: Date(),
+//     instrument: instrument,
+//     band: band,
+//     icon: icon
+//   })
+//   console.log(days);
+//   console.log("day submitted")
 
-  display();
-}
+//   display();
+// }

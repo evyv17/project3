@@ -2,7 +2,7 @@ let days = [];
 
 let instrument, band, icon;
 
-let electricguitar, acousticguitar, ACDC, davidbowie, ledzeppelin, prince;
+let electricguitar, acousticguitar, acdc, davidbowie, ledzeppelin, prince;
 
 let enter, entered;
 
@@ -18,6 +18,7 @@ function preload(){
   acdc= loadImage('images/acdc.png');
   davidbowie= loadImage('images/davidbowie.png');
   prince= loadImage('images/prince.png');
+  ledzeppelin = loadImage('images/ledzeppelin.png');
 }
 
 
@@ -49,37 +50,33 @@ function windowResized() {
 
 
 function display() {
-  background(0)
+  background(0);
+
   if (instrument == "electricguitar"){
     image(electricguitar, 400, 200);
   } 
+
   else if (instrument == "acousticguitar"){
     image(acousticguitar, 400, 200);
   }
-}
 
-function display() {
-  background(0)
   if (band == 'ledzeppelin'){
     image(ledzeppelin, 400, 200);
   } 
+
   else if (band == 'ACDC'){
-    image(ACDC, 400, 200);
-  }
-}
-
-
-function display() {
-  background(0)
-
-  if(icon == "davidbowie"){
-    image(ACDC, 400, 200);
+    image(acdc, 400, 200);
   }
   
+  if(icon == "davidbowie"){
+    image(davidbowie, 400, 200);
+  }
+
   else if (icon == "prince"){
-    image(prince, 400, 200);
+    image(prince, 200, 100);
   } 
 }
+
 
 
 

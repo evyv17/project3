@@ -1,10 +1,46 @@
+let record, metallica, fleetwood, ledzeppelin, currentSound;
+
+function preload() {
+  soundFormats('mp3', 'ogg');
+  metallica = loadSound('audio/metallica.mp3');
+  fleetwood = loadSound('audio/fleetwoodmac.mp3');
+  ledzeppelin = loadSound('audio/ledzeppelin.mp3');
+}
+
+function setup() {
+  record = createImg("images/recordplayer.png");
+  record.position(50,200);
+  record.size(350,350);
+}
+
+function draw() {
+  background(0);
+  record.mousePressed(playNextSound);
+}
+
+function playNextSound() {
+  if (currentSound) {
+    currentSound.stop();
+  }
+
+  if (currentSound === metallica) {
+    currentSound = fleetwood;
+  } else if (currentSound === fleetwood) {
+    currentSound = ledzeppelin;
+  } else {
+    currentSound = metallica;
+  }
+
+  currentSound.play();
+}
+
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
-let shuffledQuestions, currentQuestionIndex
+let shuffledQuestions, currentQuestionIndex;
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -142,3 +178,5 @@ const questions = [
     ]
   }
 ]
+
+

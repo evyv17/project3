@@ -8,6 +8,48 @@
   font-size: 25px;
 }
 
+.images{
+  display:flex;
+  flex-direction: row;
+  align-items:baseline;
+  padding: 25px;
+}
+
+#player img{
+    width: 100px;
+    height: 100px;
+}
+
+#aretha img{
+  width: 100px;
+  height: 100px;
+}
+
+#beatles img{
+  width: 225px;
+  height: 100px;
+}
+
+#walkman img{
+  width: 100px;
+  height: 100px;
+}
+
+#prince img{
+  width: 75px;
+  height: 125px;
+}
+
+#red img{
+  width: 10px;
+  height: 10px;
+}
+
+#disco img{
+  width: 100px;
+  height: 100px;
+}
+
 #startcontainer {
   display: flex;
   flex-direction: column;
@@ -24,8 +66,32 @@
   padding: 0;
 }
 
-#startlink img:hover{
-  color: red;
+#startlink{
+  color: white;
+  background-color:rgb(14, 4, 100);
+  border-radius: 25px;
+  padding: 10px;
+}
+
+#startlink a{
+  color: white;
+}
+
+#red img{
+  position: absolute;
+  left:100px;
+  top:30%;
+  width: 300px;
+  height: 300px;
+  
+}
+
+#electric img{
+  width: 275px;
+  height: 325px;
+  position: absolute;
+  right: 100px;
+  top: 30%;
 }
 
 :root {
@@ -94,6 +160,8 @@ body.wrong {
   font-size: 1.5rem;
   font-weight: bold;
   padding: 10px 20px;
+  color: white;
+  background-color:rgb(14, 4, 100);
 }
 
 .controls {
